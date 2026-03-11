@@ -9,7 +9,6 @@ Nib remembers **where** you copied something. When you open the popup, it defaul
 - **Context-aware sorting** — clips filtered by the app you're pasting into, with a toggle for all clips
 - **Full format fidelity** — stores all clipboard formats (text, HTML, RTF, images, files) and restores them on paste
 - **Pin clips and apps** — pin frequently used clips to the top; pin apps to the sidebar for quick filtering
-- **Search** — filter clips by content as you type
 - **Keyboard-driven** — arrow keys to navigate, Enter to paste, Escape to dismiss, type to search
 - **Smart positioning** — popup appears near your text cursor using a multi-layer detection strategy
 - **Dark/light theme** — follows your Windows system theme automatically
@@ -42,7 +41,6 @@ The installer will:
 | **Click** / **Enter** | Paste the selected clip |
 | **Arrow keys** | Navigate the clip list |
 | **Escape** | Dismiss without pasting |
-| **Type** | Filter clips via search |
 | **Right-click** | Pin/unpin, delete, copy, or pin the source app |
 
 ### Views
