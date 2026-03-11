@@ -6,12 +6,13 @@ Nib remembers **where** you copied something. When you open the popup, it defaul
 
 ## Features
 
-- **Context-aware sorting** — clips filtered by the app you're pasting into, with a toggle for all clips
+- **Context-aware sorting** — clips filtered by the app you're pasting into, with toggles for all clips and pinned-only views
 - **Full format fidelity** — stores all clipboard formats (text, HTML, RTF, images, files) and restores them on paste
-- **Pin clips and apps** — pin frequently used clips to the top; pin apps to the sidebar for quick filtering
-- **Search** — filter clips by content as you type
-- **Keyboard-driven** — arrow keys to navigate, Enter to paste, Escape to dismiss, type to search
+- **Pin clips and apps** — pin frequently used clips; pin apps to the sidebar for quick filtering
+- **Three view modes** — This App, All Clips, and Pinned, with left/right arrow keys to cycle between them
+- **Keyboard-driven** — arrow keys to navigate clips and views, Enter to paste, Escape to dismiss
 - **Smart positioning** — popup appears near your text cursor using a multi-layer detection strategy
+- **Auto-updater** — checks GitHub Releases daily, downloads updates in the background, applies on restart
 - **Dark/light theme** — follows your Windows system theme automatically
 - **Export/import** — back up your clipboard history as JSON
 - **Lightweight** — single binary, SQLite storage, minimal resource usage
@@ -40,15 +41,18 @@ The installer will:
 | Action | Effect |
 |--------|--------|
 | **Click** / **Enter** | Paste the selected clip |
-| **Arrow keys** | Navigate the clip list |
+| **Up/Down arrows** | Navigate the clip list |
+| **Left/Right arrows** | Cycle between views (This App, All Clips, Pinned) |
 | **Escape** | Dismiss without pasting |
-| **Type** | Filter clips via search |
 | **Right-click** | Pin/unpin, delete, copy, or pin the source app |
 
 ### Views
 
-- **This App** (default) — shows clips copied from the same app you're pasting into
+- **This App** (default) — shows clips from the same app you're pasting into, sorted by recency
 - **All Clips** — shows everything, sorted by recency
+- **Pinned** — shows only pinned clips, sorted by recency
+
+Use left/right arrow keys to cycle between views. If a sidebar tab is selected, it becomes part of the cycle.
 
 ### Pinned apps sidebar
 
@@ -65,9 +69,12 @@ Nib stores its config at `%APPDATA%\Nib\config.toml`. You can edit it directly o
 | `max_storage_mb` | `100` | Maximum disk usage in MB |
 | `max_clip_size_mb` | `50` | Maximum size of a single clip in MB |
 | `theme` | `system` | `dark`, `light`, or `system` |
-| `default_view` | `app_only` | `app_only` or `all` |
+| `default_view` | `app_only` | `app_only`, `all`, or `pinned` |
 | `excluded_apps` | `[]` | Apps to ignore (e.g., password managers) |
+| `pinned_apps` | `[]` | Apps pinned to the sidebar |
 | `auto_start` | `true` | Launch on Windows startup |
+| `auto_update_check` | `true` | Enable automatic daily update checks |
+| `auto_install_updates` | `false` | Download and stage updates automatically (applies on restart) |
 
 ## Uninstalling
 
